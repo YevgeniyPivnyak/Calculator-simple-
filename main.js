@@ -1,12 +1,14 @@
-var num1 = prompt("Please, enter first number");
-console.log(num1);
-var num2 = prompt("Please, enter second number");
+var condition = prompt("Please, enter an expression similar to the example: 2 + 4 or 63 * 42 and program will calculate result");
+
+var symbols = condition.split(' ');
+console.log(symbols);
+
+var num1 = symbols[0];
+var num2 = symbols[2];
 console.log(num2);
-var calc = prompt("Please, enter the operation (+, -, *, / )");
-console.log(calc);
+var calc = symbols[1];
 
 var res;
-
 
 if (calc === "" || num1 === "" || num2 === "") {
     alert("Value must not be empty! Please try again and enter the number.");
